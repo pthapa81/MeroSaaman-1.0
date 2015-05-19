@@ -56,7 +56,7 @@ return [
 			'driver'    => 'mysql',
         	'host'      => 'localhost',
 	        'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
-	        'database'  => 'test',
+	        'database'  => 'mero_saman',
 	        'username'  => 'root',
 	        'password'  => 'root',
 	        'charset'   => 'utf8',

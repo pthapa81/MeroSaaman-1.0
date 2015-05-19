@@ -6,8 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CreateAllTables' => $baseDir . '/database/migrations/2015_05_19_003000_create_all__tables.php',
+    'CreateBidPoolTables' => $baseDir . '/database/migrations/2015_05_18_223945_create_bid_pool_tables.php',
+    'CreateCarrierInformationTable' => $baseDir . '/database/migrations/2015_05_18_222130_create_carrier_information_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateProductRequestTable' => $baseDir . '/database/migrations/2015_05_18_233526_create_product_request_table.php',
     'CreateProjectsAndTasksTables' => $baseDir . '/database/migrations/2015_05_17_010456_create_projects_and_tasks_tables.php',
+    'CreateUserInformationTables' => $baseDir . '/database/migrations/2015_05_18_211537_create_user_information_tables.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
