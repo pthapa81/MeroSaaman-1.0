@@ -28,9 +28,24 @@ class WelcomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function welcome()
 	{
 		return view('welcome');
+	}
+
+	public function app()
+	{
+		return view('app');
+	}
+
+	public function home()
+	{
+		return view('home');
+	}
+
+	public function dashboard()
+	{
+		return view('dashboard');
 	}
 
 }
