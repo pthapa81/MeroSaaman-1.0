@@ -19,3 +19,9 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::resource('user', 'UserController');
+
+Route::bind('user', function($value, $route) {
+	return App\Project::whereSlug($value)->first();
+});
