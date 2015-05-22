@@ -8,7 +8,7 @@ class ProjectsTableSeeder extends Seeder {
     public function run()
     {
         // Uncomment the below to wipe the table clean before populating
-        DB::table('projects')->delete();
+        DB::table('user')->delete();
  
         $projects = array(
             ['id' => 1, 'name' => 'Project 1', 'slug' => 'project-1', 'created_at' => new DateTime, 'updated_at' => new DateTime],
