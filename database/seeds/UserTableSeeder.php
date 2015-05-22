@@ -3,7 +3,7 @@
  
 use Illuminate\Database\Seeder;
  
-class ProjectsTableSeeder extends Seeder {
+class UserTableSeeder extends Seeder {
  
     public function run()
     {
@@ -11,9 +11,8 @@ class ProjectsTableSeeder extends Seeder {
         DB::table('user')->delete();
  
         $projects = array(
-            ['id' => 1, 'name' => 'Project 1', 'slug' => 'project-1', 'created_at' => new DateTime, 'updated_at' => new DateTime],
-            ['id' => 2, 'name' => 'Project 2', 'slug' => 'project-2', 'created_at' => new DateTime, 'updated_at' => new DateTime],
-            ['id' => 3, 'name' => 'Project 3', 'slug' => 'project-3', 'created_at' => new DateTime, 'updated_at' => new DateTime],
+            ['id' => 1, 'fbId' => '1' 'firstName' => 'Prashant', 'lastName' => 'Thapa', 'cellPhone' => '703-973-3770', 'created_at' => new DateTime, 'updated_at' => new DateTime],
+            ['id' => 2, 'fbId' => '1' 'firstName' => 'Avi', 'lastName' => 'Shah', 'cellPhone' => '646-515-7366', 'created_at' => new DateTime, 'updated_at' => new DateTime],
         );
  
         // Uncomment the below to run the seeder
