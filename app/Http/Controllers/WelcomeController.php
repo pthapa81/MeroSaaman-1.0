@@ -40,6 +40,9 @@ class WelcomeController extends Controller {
 
 	public function home()
 	{
+		//$user = User::find(1);
+		//$user = 'Pras Thp';
+		//var_dump($user->name);
 		return view('home');
 	}
 

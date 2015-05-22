@@ -10,8 +10,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   <script src="bower_components/webcomponentsjs/webcomponents.js">
   </script>
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
   <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
   <script type="text/javascript" src="app.js"></script>
   <link rel="import" href="elements.html" 
 
