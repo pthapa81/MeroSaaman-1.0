@@ -17,6 +17,8 @@ Route::get('/app', 'WelcomeController@app' );
 Route::get('/home', 'WelcomeController@home' );
 Route::get('/dashboard', 'WelcomeController@dashboard' );
 
+Route::get('/dashboard2', 'WelcomeController@dashboard2');
+
 // Route::get('home', 'HomeController@index');
 
 // Route::controllers([

@@ -1,5 +1,9 @@
 <?php namespace App\Http\Controllers;
 
+
+use Input;
+use Redirect;
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +18,9 @@ class UserController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		// Getting all the users from the database
+        $users = User::all();
+        return view('users.index', compact('users'));
 	}
 
 	/**
@@ -25,6 +31,7 @@ class UserController extends Controller {
 	public function create()
 	{
 		//Show create form
+        return view('users.create');
 	}
 
 	/**
@@ -35,6 +42,10 @@ class UserController extends Controller {
 	public function store()
 	{
 		//
+        $input = Input::all();
+        User::create( $input );
+
+        return Redirect::route('users.index')->with('message', 'User created');
 	}
 
 	/**
@@ -43,9 +54,10 @@ class UserController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show(User $user)
 	{
 		//
+        return view('projects.show', compact('user'));
 	}
 
 	/**
@@ -54,9 +66,10 @@ class UserController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit(User $user)
 	{
 		//
+        return view('users.edit', compact('user'));
 	}
 
 	/**
@@ -65,9 +78,13 @@ class UserController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(User $user)
 	{
 		//
+        $input = array_except(Input::all(), '_method');
+        $project->update($input);
+
+        return Redirect::route('users.show', $project->slug)->with('message', 'User updated.');
 	}
 
 	/**
@@ -76,9 +93,12 @@ class UserController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy(User $user)
 	{
 		//
+        $user->delete();
+
+        return Redirect::route('users.index')->with('message', 'User deleted.');
 	}
 
 }

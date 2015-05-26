@@ -51,4 +51,10 @@ class WelcomeController extends Controller {
 		return view('dashboard');
 	}
 
+    public function dashboard2()
+    {
+        
+        return view('dashboard2');
+    }
+
 }
